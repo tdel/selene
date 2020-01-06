@@ -18,3 +18,11 @@
 /vendor/
 
 .env
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+###< symfony/webpack-encore-bundle ###
+
+# PHPSTORM
+.idea/
