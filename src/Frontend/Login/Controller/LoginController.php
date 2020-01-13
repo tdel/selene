@@ -32,4 +32,12 @@ class LoginController extends AbstractController
             'error' => $error
         ]);
     }
+
+    /**
+     * @Route(path="/logout", name="app_logout")
+     */
+    public function invokeLogout(): Response
+    {
+
+    }
 }

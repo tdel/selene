@@ -69,11 +69,10 @@ class LoginFormGuard extends AbstractFormLoginAuthenticator
         $user = $userProvider->loadUserByUsername($credentials['username']);
 
         if (null === $user) {
-            // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('User could not be found.');
+            return null;
         }
 
-        return null;
+        return $user;
     }
 
     /** @inheritDoc */
