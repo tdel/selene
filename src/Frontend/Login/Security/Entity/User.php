@@ -11,14 +11,12 @@ class User implements UserInterface
 
     private string $username;
     private string $password;
-    private string $salt;
     private array $roles;
 
-    public function __construct(string $username, string $password, string $salt, array $roles = [])
+    public function __construct(string $username, string $password, array $roles = [])
     {
         $this->username = $username;
         $this->password = $password;
-        $this->salt = $salt;
         $this->roles = $roles;
     }
 
@@ -35,9 +33,9 @@ class User implements UserInterface
     }
 
     /** @inheritDoc */
-    public function getSalt(): string
+    public function getSalt(): ?string
     {
-        return $this->salt;
+        return null;
     }
 
     /** @inheritDoc */
